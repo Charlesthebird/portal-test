@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import StoplightDemo from "./StoplightDemo";
 
 function App() {
+  //
+  // URL for the API
+  //
   const [url, setUrl] = useState(
     "https://api.apis.guru/v2/specs/github.com/1.1.4/openapi.yaml"
   );
   const [urlToDisplay, setUrlToDisplay] = useState(url);
-  // const [urlTimeout, setUrlTimeout] = useState<number>();
   useEffect(() => {
     const debounceMs = 1000;
     const urlTimeout = setTimeout(() => setUrl(urlToDisplay), debounceMs);
@@ -15,8 +17,16 @@ function App() {
     };
   }, [urlToDisplay, setUrl]);
 
+  //
+  // Other State
+  //
+  const [darkMode, setDarkMode] = useState(false);
+
+  //
+  // Render
+  //
   return (
-    <div className="App">
+    <div className="App" data-theme={darkMode ? "dark" : "light"}>
       <div className="sl-p-3 sl-prose sl-inverted sl-bg-canvas-100">
         <p className="sl-mb-3 ">
           This is a demo of{" "}
@@ -39,6 +49,21 @@ function App() {
           value={urlToDisplay}
           onChange={(e) => setUrlToDisplay(e.target.value)}
         />
+        {darkMode ? (
+          <button
+            className="sl-button sl-ml-0.5 sl-mt-2.5 sl-h-sm sl-text-base sl-font-medium sl-px-2.5 sl-bg-primary hover:sl-bg-primary-dark active:sl-bg-primary-darker disabled:sl-bg-canvas-100 sl-text-on-primary disabled:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70"
+            onClick={() => setDarkMode(false)}
+          >
+            Light Mode
+          </button>
+        ) : (
+          <button
+            className="sl-button sl-ml-0.5 sl-mt-2.5 sl-h-sm sl-text-base sl-font-medium sl-px-2.5 sl-bg-primary hover:sl-bg-primary-dark active:sl-bg-primary-darker disabled:sl-bg-canvas-100 sl-text-on-primary disabled:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70"
+            onClick={() => setDarkMode(true)}
+          >
+            Dark Mode
+          </button>
+        )}
       </div>
       <div>
         <StoplightDemo url={url} />
