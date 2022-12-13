@@ -40,7 +40,7 @@ function App() {
           onChange={(e) => setUrlToDisplay(e.target.value)}
         />
       </div>
-      <div className="sl-border">
+      <div>
         <StoplightDemo url={url} />
       </div>
       {/* <API apiDescriptionUrl="https://raw.githubusercontent.com/stoplightio/Public-APIs/master/reference/zoom/openapi.yaml" /> */}
