@@ -1,17 +1,12 @@
 import { APIProps } from "@stoplight/elements";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AppContext } from "../../Context/AppContext";
 
 declare global {
   namespace JSX {
     interface IntrinsicElements {
       "elements-api": React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLElement> &
-          // {
-          //   apiDescriptionUrl: string;
-          //   router: string;
-          //   layout: string;
-          // }
-          APIProps,
+        React.HTMLAttributes<HTMLElement> & APIProps,
         HTMLElement
       >;
     }
@@ -19,6 +14,8 @@ declare global {
 }
 
 function StoplightDemo({ url }: { url: string }) {
+  const appCtx = useContext(AppContext);
+  const { isMobileView } = appCtx;
   //
   // This sets the rendered URL, so that the <elements-api>
   // is removed and re-added each time the URL changes.
@@ -42,7 +39,7 @@ function StoplightDemo({ url }: { url: string }) {
         <elements-api
           apiDescriptionUrl={renderedUrl}
           router="hash"
-          layout="sidebar"
+          layout={isMobileView ? "stacked" : "sidebar"}
         />
       )}
     </div>
