@@ -4,11 +4,15 @@
  
 */
 :root,
-[data-theme="light"],
-[data-theme="light"] .sl-inverted,
-[data-theme="light"] .sl-inverted .sl-inverted,
-[data-theme="light"] .sl-inverted .sl-inverted .sl-inverted,
-[data-theme="light"] .sl-inverted .sl-inverted .sl-inverted .sl-inverted {
+[data-theme="light"][data-color="green"],
+[data-theme="light"][data-color="green"] .sl-inverted,
+[data-theme="light"][data-color="green"] .sl-inverted .sl-inverted,
+[data-theme="light"][data-color="green"] .sl-inverted .sl-inverted .sl-inverted,
+[data-theme="light"][data-color="green"]
+  .sl-inverted
+  .sl-inverted
+  .sl-inverted
+  .sl-inverted {
   --text-h: 0;
   --text-s: 0%;
   --text-l: 15%;
@@ -105,11 +109,15 @@
 * Dark Theme * 
  
 */
-[data-theme="dark"],
-[data-theme="dark"] .sl-inverted,
-[data-theme="dark"] .sl-inverted .sl-inverted,
-[data-theme="dark"] .sl-inverted .sl-inverted .sl-inverted,
-[data-theme="dark"] .sl-inverted .sl-inverted .sl-inverted .sl-inverted {
+[data-theme="dark"][data-color="green"],
+[data-theme="dark"][data-color="green"] .sl-inverted,
+[data-theme="dark"][data-color="green"] .sl-inverted .sl-inverted,
+[data-theme="dark"][data-color="green"] .sl-inverted .sl-inverted .sl-inverted,
+[data-theme="dark"][data-color="green"]
+  .sl-inverted
+  .sl-inverted
+  .sl-inverted
+  .sl-inverted {
   --text-h: 0;
   --text-s: 0%;
   --text-l: 86%;

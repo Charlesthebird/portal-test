@@ -21,12 +21,17 @@ function App() {
   // Other State
   //
   const [darkMode, setDarkMode] = useState(false);
+  const [greenTheme, setGreenTheme] = useState(false);
 
   //
   // Render
   //
   return (
-    <div className="App" data-theme={darkMode ? "dark" : "light"}>
+    <div
+      className="App"
+      data-theme={darkMode ? "dark" : "light"}
+      data-color={greenTheme ? "green" : "blue"}
+    >
       <div className="sl-p-3 sl-prose sl-inverted sl-bg-canvas-100">
         <p className="sl-mb-3 ">
           This is a demo of{" "}
@@ -62,6 +67,21 @@ function App() {
             onClick={() => setDarkMode(true)}
           >
             Dark Mode
+          </button>
+        )}
+        {greenTheme ? (
+          <button
+            className="sl-button sl-ml-0.5 sl-mt-2.5 sl-h-sm sl-text-base sl-font-medium sl-px-2.5 sl-bg-primary hover:sl-bg-primary-dark active:sl-bg-primary-darker disabled:sl-bg-canvas-100 sl-text-on-primary disabled:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70"
+            onClick={() => setGreenTheme(false)}
+          >
+            Blue Theme
+          </button>
+        ) : (
+          <button
+            className="sl-button sl-ml-0.5 sl-mt-2.5 sl-h-sm sl-text-base sl-font-medium sl-px-2.5 sl-bg-primary hover:sl-bg-primary-dark active:sl-bg-primary-darker disabled:sl-bg-canvas-100 sl-text-on-primary disabled:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70"
+            onClick={() => setGreenTheme(true)}
+          >
+            Green Theme
           </button>
         )}
       </div>
