@@ -1,18 +1,21 @@
 import { useContext } from "react";
+import AppContentRoutes from "./AppContentRoutes";
+import Navbar from "./Common/Navbar";
 import { AppContext } from "./Context/AppContext";
 
-function AppContent({ children }: { children: any }) {
+function AppContent() {
   const appCtx = useContext(AppContext);
-  const { isDarkMode, isGreenTheme } = appCtx;
-  //
-  // Render
-  //
+  const { isMobileView, isDarkMode, isGreenTheme } = appCtx;
+
   return (
     <div
+      className={`app ${isMobileView ? "is-mobile" : "is-desktop"}`}
       data-theme={isDarkMode ? "dark" : "light"}
       data-color={isGreenTheme ? "green" : "blue"}
     >
-      {children}
+      <Navbar />
+      <div className="background" />
+      <AppContentRoutes />
     </div>
   );
 }

@@ -1,8 +1,10 @@
+import PageContainer from "../../Common/PageContainer";
+
 function Apis() {
   //
   // Render
   //
-  return <div>List of APIs</div>;
+  return <PageContainer>List of APIs</PageContainer>;
 }
 
 export default Apis;

@@ -12,13 +12,13 @@ function Navbar() {
   return (
     <div className="sl-prose sl-py-2 sl-px-2 sl-flex sl-flex-wrap sl-justify-between sl-inverted sl-bg-canvas-100">
       <p style={{ marginBottom: "0px" }}>
-        <a className="sl-mr-3" href="/">
+        <a className="sl-mr-5" href="/">
           Logo/Landing
         </a>
-        <a className="sl-mr-3" href="/apis">
+        <a className="sl-mr-5" href="/apis">
           Apis
         </a>
-        <a className="sl-mr-3" href="/api-details/my-api">
+        <a className="sl-mr-5" href="/api-details/my-api">
           My-Api-Details
         </a>
         <a href="/usage-plans">Usage-Plans</a>

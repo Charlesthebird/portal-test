@@ -12,7 +12,7 @@ function ApiDetails() {
   );
   const [urlToDisplay, setUrlToDisplay] = useState(url);
   useEffect(() => {
-    const debounceMs = 1000;
+    const debounceMs = 500;
     const urlTimeout = setTimeout(() => setUrl(urlToDisplay), debounceMs);
     return () => {
       clearTimeout(urlTimeout);
@@ -30,7 +30,6 @@ function ApiDetails() {
             style={{ whiteSpace: "nowrap" }}
             className="sl-pr-3 sl-py-1 sl-mb-3"
           >
-            {/* Enter the URL for your OpenApi spec YAML file to begin exploring it. */}
             OpenApi URL ({apiId}):
           </p>
           <input

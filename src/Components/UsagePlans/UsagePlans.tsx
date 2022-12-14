@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import PageContainer from "../../Common/PageContainer";
 
 function UsagePlans() {
   const { apiId } = useParams();
@@ -6,7 +7,7 @@ function UsagePlans() {
   // Render
   //
   return (
-    <div>
+    <PageContainer>
       Overview of Usage Plans
       {apiId !== undefined && (
         <>
@@ -14,7 +15,7 @@ function UsagePlans() {
           Could show specific plans for api: {apiId}
         </>
       )}
-    </div>
+    </PageContainer>
   );
 }
 

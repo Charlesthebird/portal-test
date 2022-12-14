@@ -1,8 +1,10 @@
+import PageContainer from "../../Common/PageContainer";
+
 function Home() {
   //
   // Render
   //
-  return <div>Home</div>;
+  return <PageContainer>Home</PageContainer>;
 }
 
 export default Home;
