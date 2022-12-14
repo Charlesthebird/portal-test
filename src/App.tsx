@@ -14,16 +14,26 @@ function App() {
   return (
     <AppContextProvider>
       <AppContent>
+        <div
+          className="sl-bg-canvas"
+          style={{
+            minHeight: "100vh",
+            position: "absolute",
+            top: "0px",
+            bottom: "0px",
+            left: "0px",
+            right: "0px",
+            zIndex: "-1",
+          }}
+        />
         <Navbar />
-        <div>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/apis" element={<Apis />} />
-            <Route path="/api-details/:apiId" element={<ApiDetails />} />
-            <Route path="/usage-plans" element={<UsagePlans />} />
-            <Route path="/usage-plans/:apiId" element={<UsagePlans />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/apis" element={<Apis />} />
+          <Route path="/api-details/:apiId" element={<ApiDetails />} />
+          <Route path="/usage-plans" element={<UsagePlans />} />
+          <Route path="/usage-plans/:apiId" element={<UsagePlans />} />
+        </Routes>
       </AppContent>
     </AppContextProvider>
   );
