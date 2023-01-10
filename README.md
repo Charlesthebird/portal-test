@@ -6,10 +6,10 @@ This project is meant to be used with Gloo Platform API Portals. It may be used 
 
 ## Setup
 
-Paste the following into a terminal to get started. Node 16+ is required. In this code snippet, [degit](https://github.com/Rich-Harris/degit) is used to download the latest commit of this repository's main branch, and [yarn](https://yarnpkg.com/) is used as the package manager.
+Paste the following into a terminal to get started. Node 16+ is required. In this code snippet, [tmplr](https://github.com/loreanvictor/tmplr) is used to download and initialize the latest commit of this repository's main branch, and [yarn](https://yarnpkg.com/) is used as the package manager.
 
 ```
-npx degit charlesthebird/portal-test#main portal-test && cd portal-test && yarn && open http://localhost:4000 && yarn run dev
+npx tmplr charlesthebird/portal-test#main portal-test && cd portal-test && yarn && open http://localhost:4000 && yarn run dev
 ```
 
 ## Technology
