@@ -13,13 +13,13 @@ steps:
   # -- Color Variables --
   - read: primary_color
     prompt: What is the primary color hex code?
-    default: \#4f7
+    default: "#4f7"
   - read: secondary_color
     prompt: What is the secondary color hex code?
-    default: \#f74
+    default: "#f74"
 
   #
   # Write to user_variables template file
   #
   - update:
-      path: src/user_variables.ts
+      path: "./src/user_variables.ts"
