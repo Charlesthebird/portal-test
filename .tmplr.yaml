@@ -1,0 +1,15 @@
+steps:
+  - read: git_provider
+    prompt: Where is the project hosted?
+    choices:
+      - GitHub: "https://github.com"
+      - BitBucket: "https://bitbucket.org"
+      - Source Hut: "https://git.sr.ht"
+      - Other:
+          prompt: Please specify ...
+  - read: git_owner
+    from: env.USER
+    fallback:
+      prompt: What is your username?
+  # - eval: '{{ git_provider }}/{{ git_owner }}/{{ path.rootdir }}.git'
+  - eval: echo '{{ git_provider }}/{{ git_owner }}/{{ path.rootdir }}.git' > out.txt
