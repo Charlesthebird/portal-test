@@ -19,7 +19,6 @@ steps:
     default: "#f74"
 
   #
-  # Write to user_variables template file
+  # Write to all template files in the src folder.
   #
-  - update:
-      path: "src/user_variables.ts"
+  - update: "src/**/*.tmplr.ts"
