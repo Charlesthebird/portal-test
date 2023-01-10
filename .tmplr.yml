@@ -1,8 +1,3 @@
 # .tmplr.yml
 steps:
-  - read: project_name
-    from: git.remote_name
-    fallback:
-      prompt: What is the name of the project?
-      default:
-        from: path.rootdir
+  - exec: echo 'testing...' > out.txt
