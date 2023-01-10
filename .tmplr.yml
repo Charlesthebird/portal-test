@@ -6,5 +6,5 @@ steps:
     prompt: What is the company name?
 
   # Write to user_variables file
-  # - update: "./user_variables.template.ts"
-  - update: test.md
+  - update: user_variables.template.ts
+  # - update: test.md
