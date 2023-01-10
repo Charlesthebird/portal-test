@@ -1,3 +1,9 @@
-# .tmplr.yml
 steps:
-  - exec: echo 'testing...' > out.txt
+  # Read variables from CLI
+  - read: project_name
+    prompt: What is the project name?
+  - read: company_name
+    prompt: What is the company name?
+
+  # Write to user_variables file
+  - update: ./user_variables.template.ts
