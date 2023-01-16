@@ -11,14 +11,17 @@ steps:
     default: my_company_name
 
   # -- Color Variables --
-  - read: primary_color
-    prompt: What is the primary color hex code?
-    default: "#4f7"
-  - read: secondary_color
-    prompt: What is the secondary color hex code?
-    default: "#f74"
+  # - read: primary_color
+  #   prompt: What is the primary color hex code?
+  #   default: "#4f7"
+  # - read: secondary_color
+  #   prompt: What is the secondary color hex code?
+  #   default: "#f74"
 
   #
-  # Write to all template files in the src folder.
+  # Write to all template files in the src folder, and
+  # index.html. This replaces {{ tmplr.variableName }}
+  # with the variables value.
   #
   - update: "src/**/*.tmplr.ts"
+  - update: "index.html"
